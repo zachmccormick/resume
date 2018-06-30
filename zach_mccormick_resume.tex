@@ -1,0 +1,248 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{bibentry}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Zach McCormick} & Email : {zachary.tyler.mccormick@gmail.com}\\
+  {http://z11k.com/} & Mobile : +1-317-443-2799 \\
+\end{tabular*}
+
+%-------------------------SUMMARY-------------------------
+\section{Summary}
+
+Zach graduated from Vanderbilt University with a BS in Computer Science and Mathematics in 2013. He has worked 
+for a number of companies both as a full-time employee and consultant/contractor, and specializes in web applications, 
+mobile applications, distributed systems, and software systems engineering. His main languages of choice are Python 
+and Java, but has experience working on systems in JavaScript, Ruby, Groovy, and Scala as well.
+
+%-----------PROFESSIONAL EXPERIENCE-----------------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Braze (formerly Appboy)}{New York, NY}
+      {Senior Software Engineer - Messaging \& Automation Team}{Mar 2018 - Present}
+%      \resumeItemListStart
+%        \resumeItem{Messaging Pipeline Enhancements}
+%          {Enhanced messaging pipeline behaviors such as time and volume-based rate limiting, quiet time parameters, send time optimization, and channel optimization}
+%        \resumeItem{High Volume Postgres Storage}
+%          {Architected and implemented mechanisms to store tens of thousands of time-series data points in PostgreSQL per second.}
+%      \resumeItemListEnd
+
+    \resumeSubheading
+      {Trailblazing Technology LLC}{Nashville, TN}
+      {Senior Software Engineer}{Jun 2011 - Mar 2018}
+      \resumeItemListStart
+        \resumeItem{Learning Sciences Observation Application (LSOA)}
+          {Produced an iPad application using an agile methodology to provide teachers with an efficient interface for rapidly capturing evidence of students learning. \textbf{Ongoing}.}
+        \resumeItem{Several Private Contracts}
+          {Assisted in litigation research and code review for a variety of technology patents involving mobile operating systems, audio encoding/decoding, engine micro-controller design, sensor fusion algorithms, and human-computer interaction.}
+%        \resumeItem{Private Contract}
+%          {Assembled a data-cleaning and machine learning research pipeline to ingest patient data for prison populations to predict the likelihood of suicide to automatically flag high-risk patients.}
+        \resumeItem{Online Timeline Follow-Back (O-TLFB)}
+          {Implemented a commonly used Timeline Follow-Back survey as an online service to aid in collecting of research data for Renée Martin-Willett at UC Boulder.}
+%        \resumeItem{Private Contract}
+%          {Produced a Python 3 application performance monitoring (APM) solution for on-premise or SaaS deployment. The software could record data, display graphs, and execute local or remote scripts.}
+%        \resumeItem{Private Contract}
+%          {Finalized and verified the correctness of a plugin for HPE LoadRunner for performance testing of various IoT protocols.}
+        \resumeItem{DSyM SaaS Application}
+          {Developed a SaaS application for scoring texts according to decoding difficulty for researchers at Vanderbilt University.}
+        \resumeItem{Private Contract}
+          {Migrated a high-traffic YouTube-like web application from Rackspace to AWS and upgraded foundational technologies in the process (upgraded Django, moved to NGINX, moved to Waitress, etc.).}
+        \resumeItem{Computer-assisted Personal Interviewing (CAPI) Application}
+          {Designed and implemented an Android tablet application for interviewing and surveying refugees who may have limited prior exposure to technology or limited literacy or numeracy skills.}
+        \resumeItem{PhoneTcB}
+          {Developed an Android application for detection of neonatal jaundice via typical 3rd-world smartphone hardware in coalition with the research group of Prof. Chetan Patil at Temple University. \textbf{Ongoing}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {HoneyCo Homes}{Nashville, TN}
+      {Product Engineer}{Aug 2016 - Apr 2017}
+      \resumeItemListStart
+        \resumeItem{Startup Engineering/First Engineer}
+          {Designed smart home IoT hardware/software architecture, wrote front-end and back-end code, managed deployment and infrastructure, recruited engineers and product managers, and led the technical team.}
+        \resumeItem{Installation and Support}
+          {Designed installation, equipment management, and operational processes. Installed and supported several software/hardware deployments.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {SmileDirectClub}{Nashville, TN}
+      {Senior Systems Engineer}{Oct 2015 - May 2016}
+      \resumeItemListStart
+        \resumeItem{Dockerization}
+          {Reworked organization-wide software deployment process using Docker to reduce cost, improve reliability, and ensure repeatability/consistency within one month of joining the team.}
+        \resumeItem{Microservices to Monolith}
+          {Migrated a suboptimal microservice architecture to a monolithic Django application to enable engineering team to maximize efficiency by leveraging mature open-source libraries and components.}
+        \resumeItem{Data Warehousing}
+          {Established a data warehouse for single-source-of-truth analysis of business's CRM, ERP, and eCommerce processes.}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {CircleUp}{San Francisco, CA}
+      {Remote Engineer}{Feb 2015 - Oct 2015}
+      \resumeItemListStart
+        \resumeItem{Django Web Application}
+          {Developed software in Python using the Django framework to improve and add new features to CircleUp’s investor/company marketplace.}
+        \resumeItem{Mechanical Turk}
+          {Engineered a solution using Amazon Mechanical Turk to gather “soft” information (that could not be automatically scraped) about companies and industries for a data gathering utility to provide unique market insight for investors.}
+        \resumeItem{Big Data Integration}
+          {Integrated various data sources and external APIs with analysis tools to provide unique insight for both entrepreneurs and investors using Big Data approaches like data mining and machine learning.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Spotwise}{Nashville, TN}
+      {Co-founder}{Mar 2014 - Apr 2015}
+      \resumeItemListStart
+        \resumeItem{Founding Research}
+          {Developed initial software product for participation in the Multi-City Innovation Challenge in 2014 (between Boston, Nashville, Charlotte, and Palo Alto) and produced presentation and video, leading to our acceptance at the Jumpstart Foundry.}
+        \resumeItem{Teambuilding}
+          {Created founding team (both engineering and business development/corporate team) in the Spring of 2014 before our entry into the Jumpstart Foundry startup accelerator.}
+        \resumeItem{Engineering Management}
+          {Led engineers to build prototypes and mockups needed by corporate team to pivot quickly and determine the optimal trajectory of the company post-funding.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Optio Labs}{Nashville, TN}
+      {Senior Development Engineer / Director of Research}{Aug 2012 - Jan 2015}
+      \resumeItemListStart
+        \resumeItem{Corporate Strategy}
+          {Participated as part of the executive leadership team in the creation of a strategy to steer the company from research and development of features aimed toward system integrators, to the development of products for end users.}
+        \resumeItem{Mobile Cybersecurity Market Research}
+          {Executed market research from a technical perspective for all existing and future projects to determine competitor offerings, differentiating factors in our products, and overall market direction.}
+        \resumeItem{Mobile OS Policy Engine}
+          {Developed and architected a highly flexible policy engine and communications framework for Android and Spring that eventually led to the Optio Labs’ product named Kodomo.}
+        \resumeItem{OptioCAC}
+          {Designed and implemented industry leading Android CAC/PIV smartcard middleware, simplifying use of smartcards and hardware cryptographic tokens for application developers.}
+        \resumeItem{OptioCore}
+          {Researched and developed prototypes with a team for several innovative security products based on the in-house OptioCore framework, such as a workbench for behavioral analysis of Android malware and multi-persona support for Android with an NSA-grade cryptographic barrier between personas.}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Vanderbilt University}{Nashville, TN}
+      {Coursera TA, TA/Grader}{Aug 2012 - May 2013}
+      \resumeItemListStart
+        \resumeItem{Coursera TA}
+          {Developed quizzes, moderated forums, answered student questions, etc. for Pattern-Oriented Software Architectures for Concurrent and Networked Software taught by Prof. Doug Schmidt on Coursera.}
+        \resumeItem{Coursera Research}
+          {Analyzed raw online course data, looking for trends and correlations for several (upcoming) academic research papers.}
+        \resumeItem{TA/Grader}
+          {Held weekly office hours and graded assignments/quizzes for CS 282: Principles of Operating Systems II: Systems Programming for Android taught by Prof. Doug Schmidt.}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Blackbaud}{Charleston, SC}
+      {Product Management Intern}{Jun 2012 - Aug 2012}
+      \resumeItemListStart
+        \resumeItem{Developer Community}
+          {Revitalized existing developer resources including http://www.bbdevnetwork.com via an iterative development process where I met with a diverse range of developers weekly to evaluate strengths, weaknesses, opportunities, and threats of each iteration.}
+        \resumeItem{Automatic Documentation}
+          {Developed automated developer documentation generators for the APIs of various Blackbaud products by collaborating with core consultants and developers to build tools tightly integrated into the product build process.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Vanderbilt University}{Nashville, TN}
+      {Bachelor of Science in Computer Science and Mathematics;  GPA: 3.5}{Aug 2009 -- May 2013}
+      \resumeItemListStart
+        \resumeItem{Activities \& Societies}
+          {Phi Gamma Delta, Vanderbilt Mobile Applications Team, Vanderbilt Student Government}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Budapest University of Technology and Economics}{Budapest, Hungary}
+      {Semester abroad studying Software Engineering}{Spring 2012}
+  \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------------
+\nobibliography{ref}
+\bibliographystyle{ieeetr}
+
+\section{Publications}
+  \begin{enumerate}
+    \item \bibentry{martin2018novel}
+    \item \bibentry{dumont2017development}
+    \item \bibentry{white2014addressing}
+    \item \bibentry{schmidt2013creating}
+    \item \bibentry{schmidt2013producing}
+    \item \bibentry{mccormick2012data}
+  \end{enumerate}
+
+%--------PROGRAMMING SKILLS------------
+%\section{Programming Skills}
+%  \resumeSubHeadingListStart
+%    \item{
+%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
+%      \hfill
+%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
+%    }
+%  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
