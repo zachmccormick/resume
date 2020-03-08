@@ -7,8 +7,13 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage{bibentry}
 \usepackage{fancyhdr}
+
+% bibtex and hyperref don't get along. This hack makes them get along
+\usepackage{bibentry}
+\makeatletter\let\saved@bibitem\@bibitem\makeatother
+\usepackage{hyperref}
+\makeatletter\let\@bibitem\saved@bibitem\makeatother
 
 
 \pagestyle{fancy}
@@ -66,17 +71,20 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Zach McCormick} & Email : {zachary.tyler.mccormick@gmail.com}\\
-  {http://z11k.com/} & Mobile : +1-317-443-2799 \\
+  \textbf{\Large Zach McCormick} & Email : {\href{mailto:zachary.tyler.mccormick@gmail.com}{zachary.tyler.mccormick@gmail.com}}\\
+  {\url{https://z11k.com/}} & Mobile : \href{tel:19293779125}{+1-929-377-9125} \\
 \end{tabular*}
 
 %-------------------------SUMMARY-------------------------
 \section{Summary}
 
-Zach graduated from Vanderbilt University with a BS in Computer Science and Mathematics in 2013. He has worked 
-for a number of companies both as a full-time employee and consultant/contractor, and specializes in web applications, 
-mobile applications, distributed systems, and software systems engineering. His main languages of choice are Python 
-and Java, but has experience working on systems in JavaScript, Ruby, Groovy, and Scala as well.
+Zach is a software engineer and manager passionate about building and maintaining global-scale distributed systems.
+He has experience with distributed systems, web applications, and mobile applications across a variety of industries,
+including marketing automation, fintech, IoT, healthcare, and mobile cybersecurity, as well as across a variety of
+languages and technologies, including Python, Java, JavaScript, Ruby, PostgreSQL, MySQL, MongoDB, Redis, and
+others. He currently works for Braze managing the engineering team behind Canvas, a workflow engine for marketing
+automation that is responsible for orchestrating hundreds of millions of messages per day.
+
 
 %-----------PROFESSIONAL EXPERIENCE-----------------
 \section{Professional Experience}
@@ -87,7 +95,7 @@ and Java, but has experience working on systems in JavaScript, Ruby, Groovy, and
       {Engineering Manager - Messaging \& Automation Team}{Jun 2019 - Present}
        \resumeItemListStart
         \resumeItem{Manager and Scrum Master}
-          {Led Scrum methodology for the Messaging and Automation Team (6 direct reports).}
+          {Led Scrum methodology for the Messaging and Automation Team (9 direct reports).}
       \resumeItemListEnd
     \resumeSubheading
       {Braze (formerly Appboy)}{New York, NY}
@@ -111,20 +119,20 @@ and Java, but has experience working on systems in JavaScript, Ruby, Groovy, and
           {Produced an iPad application using an agile methodology to provide teachers with an efficient interface for rapidly capturing evidence of students learning.}
         \resumeItem{Several Private Contracts}
           {Assisted in litigation research and code review for a variety of technology patents involving mobile operating systems, audio encoding/decoding, engine micro-controller design, sensor fusion algorithms, and human-computer interaction.}
-%        \resumeItem{Private Contract}
-%          {Assembled a data-cleaning and machine learning research pipeline to ingest patient data for prison populations to predict the likelihood of suicide to automatically flag high-risk patients.}
+        \resumeItem{Private Contract}
+          {Assembled a data-cleaning and machine learning research pipeline to ingest patient data for prison populations to predict the likelihood of suicide to automatically flag high-risk patients.}
         \resumeItem{Online Timeline Follow-Back (O-TLFB)}
           {Implemented a commonly used Timeline Follow-Back survey as an online service to aid in collecting of research data for Renée Martin-Willett at UC Boulder.}
-%        \resumeItem{Private Contract}
-%          {Produced a Python 3 application performance monitoring (APM) solution for on-premise or SaaS deployment. The software could record data, display graphs, and execute local or remote scripts.}
-%        \resumeItem{Private Contract}
-%          {Finalized and verified the correctness of a plugin for HPE LoadRunner for performance testing of various IoT protocols.}
-%        \resumeItem{DSyM SaaS Application}
-%          {Developed a SaaS application for scoring texts according to decoding difficulty for researchers at Vanderbilt University.}
+        \resumeItem{Private Contract}
+          {Produced a Python 3 application performance monitoring (APM) solution for on-premise or SaaS deployment. The software could record data, display graphs, and execute local or remote scripts.}
+        \resumeItem{Private Contract}
+          {Finalized and verified the correctness of a plugin for HPE LoadRunner for performance testing of various IoT protocols.}
+        \resumeItem{DSyM SaaS Application}
+          {Developed a SaaS application for scoring texts according to decoding difficulty for researchers at Vanderbilt University.}
         \resumeItem{SchoolTube}
           {Migrated a YouTube-like web application from Rackspace to AWS and upgraded foundational technologies in the process (upgraded Django, moved to NGINX, moved to Waitress, etc.).}
-%        \resumeItem{Computer-assisted Personal Interviewing (CAPI) Application}
-%         {Designed and implemented an Android tablet application for interviewing and surveying refugees who may have limited prior exposure to technology or limited literacy or numeracy skills.}
+        \resumeItem{Computer-assisted Personal Interviewing (CAPI) Application}
+         {Designed and implemented an Android tablet application for interviewing and surveying refugees who may have limited prior exposure to technology or limited literacy or numeracy skills.}
         \resumeItem{PhoneTcB}
           {Developed an Android application for detection of neonatal jaundice via typical 3rd-world smartphone hardware in coalition with the research group of Prof. Chetan Patil at Temple University.}
       \resumeItemListEnd
@@ -147,8 +155,8 @@ and Java, but has experience working on systems in JavaScript, Ruby, Groovy, and
           {Reworked organization-wide software deployment process using Docker to reduce cost, improve reliability, and ensure repeatability/consistency within one month of joining the team.}
         \resumeItem{Microservices to Monolith}
           {Migrated a suboptimal microservice architecture to a monolithic Django application to enable engineering team to maximize efficiency by leveraging mature open-source libraries and components.}
-%        \resumeItem{Data Warehousing}
-%          {Established a data warehouse for single-source-of-truth analysis of business's CRM, ERP, and eCommerce processes.}
+       \resumeItem{Data Warehousing}
+          {Established a data warehouse for single-source-of-truth analysis of business's CRM, ERP, and eCommerce processes.}
       \resumeItemListEnd
       
     \resumeSubheading
@@ -169,7 +177,7 @@ and Java, but has experience working on systems in JavaScript, Ruby, Groovy, and
       \resumeItemListStart
         \resumeItem{Founding Research}
           {Developed initial software product for participation in the Multi-City Innovation Challenge in 2014 (between Boston, Nashville, Charlotte, and Palo Alto) and produced presentation and video, leading to our acceptance at the Jumpstart Foundry.}
-        \resumeItem{Teambuilding}
+        \resumeItem{Team Building}
           {Created founding team (both engineering and business development/corporate team) in the Spring of 2014 before our entry into the Jumpstart Foundry startup accelerator.}
         \resumeItem{Engineering Management}
           {Led engineers to build prototypes and mockups needed by corporate team to pivot quickly and determine the optimal trajectory of the company post-funding.}
@@ -236,10 +244,12 @@ and Java, but has experience working on systems in JavaScript, Ruby, Groovy, and
   \resumeSubHeadingListStart
     \resumeSubheading
       {MongoDB World 2019}{New York, NY}
-      {How Braze Uses the Aggregation Pipeline for Lean, Mean, and Efficient Scaling}{June 17, 2019}      
+      {\href{https://www.slideshare.net/mongodb/mongodb-world-2019-how-braze-uses-the-mongodb-aggregation-pipeline-for-lean-mean-and-efficient-scaling-braze}
+      {How Braze Uses the Aggregation Pipeline for Lean, Mean, and Efficient Scaling}}{June 17, 2019} 
     \resumeSubheading
       {Datadog Dash 2019}{New York, NY}
-      {How Small Changes Can Make Huge Waves}{July 17, 2019}
+      {\href{https://www.youtube.com/watch?v=K2MY4y9JuRE}
+      {How Small Changes Can Make Huge Waves}}{July 17, 2019}
   \resumeSubHeadingListEnd
 
 %-----------PUBLICATIONS-----------------
@@ -248,6 +258,8 @@ and Java, but has experience working on systems in JavaScript, Ruby, Groovy, and
 
 \section{Publications}
   \begin{enumerate}
+    \item \bibentry{martin2019transformation}
+    \item \bibentry{martin2019interdisciplinary}
     \item \bibentry{martin2018novel}
     \item \bibentry{dumont2017development}
     \item \bibentry{white2014addressing}
