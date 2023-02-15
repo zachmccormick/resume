@@ -46,11 +46,25 @@
   }
 }
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -82,9 +96,7 @@ Zach is a software engineer and manager passionate about building and maintainin
 He has experience with distributed systems, web applications, and mobile applications across a variety of industries,
 including marketing automation, fintech, IoT, healthcare, and mobile cybersecurity, as well as across a variety of
 languages and technologies, including Python, Java, JavaScript, Ruby, PostgreSQL, MySQL, MongoDB, Redis, and
-others. He currently works for Braze managing the Core Messaging Team, which is responsible for the underlying
-frameworks and pipelines that send hundreds of millions of messages per day on behalf of Braze's customers..
-
+others.
 
 %-----------PROFESSIONAL EXPERIENCE-----------------
 \section{Professional Experience}
@@ -92,32 +104,57 @@ frameworks and pipelines that send hundreds of millions of messages per day on b
 
     \resumeSubheading
       {Braze}{New York, NY}
-      {Engineering Manager/Sr. Engineering Manager - Messaging \& Automation Team}{Jun 2019 - Present}
+      {Staff Engineer}{Sep 2021 - Present}
+       \resumeItemListStart
+        \resumeItem{Operational Improvements}
+          {Consistently executed on projects to improve operational efficiency, including page/error federation to teams, ground-up re-architecture of features to improve stability, and human process enhancements around page and incident management and follow-up.}
+        \resumeItem{Go-to Subject Matter Expert in Messaging, Canvas, and Infrastructure}
+          {Regularly answered questions and hosted information sessions on topics ranging from deep internal details on how Braze's messaging pipeline works, to customer use-cases in Canvas, to nuances in Braze's MongoDB cluster topology. Many of these sessions have been turned into onboarding videos for teams in and outside of engineering.}
+        \resumeItem{Team and Division Mission/Vision/Strategy}
+          {Worked with directors/VPs in engineering to help formulate or adjust mission statements, technical visions, and technical strategy documents for many teams, often oriented around existing and future architecture and application of Conway's Law.}
+        \resumeItem{Messaging Pipeline Architecture}
+          {Redefined the fundamental structure of the messaging pipeline into a component-wise architecture that promoted SOLID software engineering principles and distributed component ownership.}
+        \resumeItem{Incident Resolution Expert}
+          {Led root-cause identification and remediation of scores of incidents such as botched migrations, unexpected hardware failures, race conditions only seen at global scale, and even database driver concurrency bugs. Mentored engineers across multiple teams on how to identify the causes more quickly and how to take remedial action more confidently.}
+        \resumeItem{Fun Stats}
+          {Reviewed over 700 PRs as a Staff Engineer, and over 2500 while at Braze. Contributed over 200 PRs as a Staff Engineer, and nearly 1000 while at Braze.}
+% as of Feb 14, 2023: 2601 reviewed PRs, 929 PRs
+% 2023: 98 reviewed PRs, 18 PRs
+% 2022: 395 reviewed PRs, 151 PRs
+% 2021: 489 reviewed PRs, 162 PRs
+% 2020: 478 reviewed PRs, 143 PRs
+% 2019: 893 reviewed PRs, 278 PRs
+% 2018: 253 reviewed PRs, 177 PRs
+      \resumeItemListEnd
+
+    \resumeSubSubheading
+      {Engineering Manager/Sr. Engineering Manager}{Jun 2019 - Sep 2021}
        \resumeItemListStart
         \resumeItem{Engineering Management}
-          {Led and grew the Messaging and Automation Team (5 to 10 direct reports).}
-        \resumeItem{Organizational Involvement}
+          {Grew the Messaging and Automation Team from 5 to 10 direct reports.}
+        \resumeItem{Canvas Flow}
+          {Facilitated the team's development of Canvas Flow, a major iteration of Braze's flagship product, using fundamentally new backend and frontend paradigms iteratively over several quarters.}
+        \resumeItem{Organization Building}
           {Promoted and led cross-team initiatives like Engineering Lunch and Learns, Postgres/Content Cards stability working group, On-call Committee, Braze's Beacon product system, and more.}
         \resumeItem{Continued Individual Execution}
-          {Executed on a number of transformative or high-value projects requiring specialty knowledge or skills, such as implementing a job processing back-pressure system and deprecating "Original IAMs".}
+          {Executed on a number of transformative or high-value projects requiring specialty knowledge or skills, such as implementing a job processing back-pressure system to reduce critical incidents and deprecating "Original IAMs" to save money on infrastructure.}
         \resumeItem{Velocity Integration and Enablement}
           {Owned the decision, purchase, and integration of CodeClimate Velocity to provide additional visibility for both EMs and ICs at Braze to drive continuous improvement.}
-        \resumeItem{Team Split}
-          {Split the Messaging \& Automation Team into two teams: M\&A and Core Messaging, focusing CM on architecture, observability, performance, and documentation.}
+        \resumeItem{Team Restructuring}
+          {Split the Messaging and Automation Team into two teams: "Messaging and Automation" and Core Messaging, with the Messaging and Automation team focused on Canvas, and the Core Messaging Team focused on message sending infrastructure. Managed both teams for several months, with each team having improved agility due to separation of concerns.}
       \resumeItemListEnd
       
-    \resumeSubheading
-      {Braze}{New York, NY}
+    \resumeSubSubheading
       {Senior Software Engineer}{Mar 2018 - Jun 2019}
       \resumeItemListStart
-        \resumeItem{Messaging and Automation Team}
-          {Created or enhanced high-frequency features of Braze's Messaging Pipeline, such as Frequency Capping, Rate/Volume Limiting, and "X Events in Y Time" Segmentation Rules.}
-        \resumeItem{Platform Infrastructure Team}
+        \resumeItem{High-scale Feature Development}
+          {Created or enhanced high-scale features of our messaging pipeline, such as Frequency Capping, Rate/Volume Limiting, and "X Events in Y Time" Segmentation Rules.}
+        \resumeItem{Organization-wide Platform Infrastructure}
           {Re-engineered local development paradigm using Docker Compose. Migrated most CI work to Buildkite with Knapsack, reducing build times by over 50 percent. Integrated CodeCov, Danger, and various static analysis tools to build process.}
         \resumeItem{Postgres Task Force}
-          {Realized need for cross-team task force to implement Postgres at scale (Amazon Aurora). Coordinated multiple stakeholders across product management, DevOps, and engineering teams.}
+          {Realized the need for a cross-team task force to implement Postgres at scale (Amazon Aurora). Coordinated with multiple stakeholders across product management, DevOps, and engineering teams to deliver the much-anticipated Content Cards feature more rapidly.}
         \resumeItem{Datadog Integration and Enablement}
-          {Took responsibility for Datadog integration in platform code, involving multiple phone calls, canary deploys, and debugging around issues related to Ruby traces, MongoDB spans, and more. Led enablement to entire product organization via Lunch and Learns and extensive documentation.}
+          {Implemented Datadog APM and metrics integration in platform code, allowing the organization to migrate away from New Relic to a better and less expensive observability solution. Educated other engineers on how to use both basic and advanced features of the Datadog platform.}
         \resumeItem{Incident Management/On-call Process}
           {Provided essential engineering support for urgent issues, culminating in design and implementation of org-wide on-call rotation.}
       \resumeItemListEnd
@@ -128,15 +165,15 @@ frameworks and pipelines that send hundreds of millions of messages per day on b
       \resumeItemListStart
         \resumeItem{Learning Sciences Observation Application (LSOA)}
           {Produced an iPad application using an agile methodology to provide teachers with an efficient interface for rapidly capturing evidence of students learning.}
-        \resumeItem{Several Private Contracts}
+        \resumeItem{Several Private Contracts - Patent Litigation}
           {Assisted in litigation research and code review for a variety of technology patents involving mobile operating systems, audio encoding/decoding, engine micro-controller design, sensor fusion algorithms, and human-computer interaction.}
-        \resumeItem{Private Contract}
+        \resumeItem{Private Contract - Data Science}
           {Assembled a data-cleaning and machine learning research pipeline to ingest patient data for prison populations to predict the likelihood of suicide to automatically flag high-risk patients.}
         \resumeItem{Online Timeline Follow-Back (O-TLFB)}
           {Implemented a commonly used Timeline Follow-Back survey as an online service to aid in collecting of research data for Renée Martin-Willett at UC Boulder.}
-        \resumeItem{Private Contract}
+        \resumeItem{Private Contract - Software Development}
           {Produced a Python 3 application performance monitoring (APM) solution for on-premise or SaaS deployment. The software could record data, display graphs, and execute local or remote scripts.}
-        \resumeItem{Private Contract}
+        \resumeItem{Private Contract - Software Development}
           {Finalized and verified the correctness of a plugin for HPE LoadRunner for performance testing of various IoT protocols.}
         \resumeItem{DSyM SaaS Application}
           {Developed a SaaS application for scoring texts according to decoding difficulty for researchers at Vanderbilt University.}
@@ -162,6 +199,8 @@ frameworks and pipelines that send hundreds of millions of messages per day on b
       {SmileDirectClub}{Nashville, TN}
       {Senior Systems Engineer}{Oct 2015 - May 2016}
       \resumeItemListStart
+        \resumeItem{Feature Development}
+          {Developed numerous features for the customer-facing website, internal sales and marketing platform, and internal operations platform - in both product manager and engineering roles.}
         \resumeItem{Dockerization}
           {Reworked organization-wide software deployment process using Docker to reduce cost, improve reliability, and ensure repeatability/consistency within one month of joining the team.}
         \resumeItem{Microservices to Monolith}
@@ -187,27 +226,27 @@ frameworks and pipelines that send hundreds of millions of messages per day on b
       {Co-founder}{Mar 2014 - Apr 2015}
       \resumeItemListStart
         \resumeItem{Founding Research}
-          {Developed initial software product for participation in the Multi-City Innovation Challenge in 2014 (between Boston, Nashville, Charlotte, and Palo Alto) and produced presentation and video, leading to our acceptance at the Jumpstart Foundry.}
+          {Developed initial software product for participation in the Multi-City Innovation Challenge in 2014 (between Boston, Nashville, Charlotte, and Palo Alto) and produced presentation and video, leading to our acceptance in Jumpstart Foundry's 2015 cohort.}
         \resumeItem{Team Building}
-          {Created founding team (both engineering and business development/corporate team) in the Spring of 2014 before our entry into the Jumpstart Foundry startup accelerator.}
+          {Recruited founding team (both engineering and business-side) in the Spring of 2014 before our entry into the Jumpstart Foundry startup accelerator.}
         \resumeItem{Engineering Management}
-          {Led engineers to build prototypes and mockups needed by corporate team to pivot quickly and determine the optimal trajectory of the company post-funding.}
+          {Led engineers to build prototypes and mockups needed by business team to pivot quickly and determine the optimal trajectory of the company post-funding.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Optio Labs}{Nashville, TN}
       {Senior Development Engineer / Director of Research}{Aug 2012 - Jan 2015}
       \resumeItemListStart
-        \resumeItem{Corporate Strategy}
-          {Participated as part of the executive leadership team in the creation of a strategy to steer the company from research and development of features aimed toward system integrators, to the development of products for end users.}
-        \resumeItem{Mobile Cybersecurity Market Research}
-          {Executed market research from a technical perspective for all existing and future projects to determine competitor offerings, differentiating factors in our products, and overall market direction.}
         \resumeItem{Mobile OS Policy Engine}
           {Developed and architected a highly flexible policy engine and communications framework for Android and Spring that eventually led to the Optio Labs’ product named Kodomo.}
         \resumeItem{OptioCAC}
           {Designed and implemented industry leading Android CAC/PIV smartcard middleware, simplifying use of smartcards and hardware cryptographic tokens for application developers.}
         \resumeItem{OptioCore}
           {Researched and developed prototypes with a team for several innovative security products based on the in-house OptioCore framework, such as a workbench for behavioral analysis of Android malware and multi-persona support for Android with an NSA-grade cryptographic barrier between personas.}
+        \resumeItem{Product Strategy}
+          {Participated as part of the executive leadership team in the creation of a strategy to steer the company from research and development of features aimed toward system integrators, to the development of products for end users.}
+        \resumeItem{Market Research}
+          {Executed market research from a technical perspective for all existing and future projects to determine competitor offerings, differentiating factors in our products, and overall market direction.}
       \resumeItemListEnd
       
 %    \resumeSubheading
